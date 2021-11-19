@@ -1,0 +1,167 @@
+.paymentForm {
+  h2 + p {
+    line-height: 1.4;
+    &:last-of-type {
+      margin-bottom: 50px;
+    }
+  }
+  > .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  fieldset + fieldset{
+    margin-top: 48px;
+  }
+}
+
+.paymentForm__inputsContainer {
+  width: 57%;
+}
+
+.paymentForm__BillingAddress {
+  max-width: 556px;
+}
+
+.paymentForm__orderSummaryContainer {
+  width: 38%;
+  h2 {
+    margin-bottom: 0;
+  }
+}
+.paymentForm__orderSummary {
+  background: $light-grey;
+  padding: 42px 32px 76px;
+  ul {
+    border-top: solid 2px $light-grey-2;
+    border-bottom: solid 2px $light-grey-2;
+    list-style: none;
+    margin: 32px 0;
+    padding: 0 8px;
+    li {
+      padding: 28px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  span + span {
+    font-weight: bold;
+  }
+}
+.paymentForm__orderSummaryTotal {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+.paymentForm__submitContainer {
+  margin-top: 112px;
+}
+
+.paymentForm__inputRow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  +.paymentForm__inputRow {
+    margin-top: 48px;
+  }
+  label {
+    margin-bottom: 18px;
+  }
+
+  .select-wrapper {
+    position: relative;
+    &:after {
+      content: '╲╱';
+      font-size: 9px;
+      color: white;
+      background: $beige;
+      height: 30px;
+      width: 30px;
+      line-height: 30px;
+      border-radius: 50%;
+      text-align: center;
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    height: 74px;
+    width: 100%;
+    border: solid 2px $light-grey-2;
+    line-height: 1;
+    padding: 0 16px;
+  }
+  input {
+    &[type="number"], &[type="text"], &[type="email"], &[type="tel"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      height: 74px;
+      border: solid 2px $light-grey-2;
+      line-height: 1;
+      padding: 28px 16px;
+    }
+
+    &[name="cvv"], &[name="expiration-date"] {
+      max-width: 370px;
+    }
+
+    &[type="checkbox"] {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      z-index: 1;
+      opacity: 0;
+      &+label {
+        display: flex;
+        align-items: center;
+        position: relative;
+        &:before {
+          content: '';
+          position: relative;
+          display: inline-block;
+          margin-right: 18px;
+          width: 48px;
+          height: 48px;
+          line-height: 48px;
+          text-align: center;
+          background: white;
+          border: solid 2px $light-grey-2;
+        }
+      }
+    }
+
+    &[type="checkbox"]:checked {
+      &+label:before {
+        content: '✔';
+      }
+    }
+    &[type="checkbox"]:focus-visible {
+      &+label:before {
+        outline: solid 2px blue;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-med) {
+  .paymentForm > .container {
+    flex-direction: column;
+  }
+  .paymentForm__inputsContainer {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+  .paymentForm__orderSummaryContainer {
+    width: 100%;
+  }
+}

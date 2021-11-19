@@ -1,0 +1,23 @@
+.storefront {
+  padding: 50px 0 40px;
+}
+.storeFront__title {
+  margin-bottom: 100px;
+}
+.storefront__optionsList {
+  list-style: none;
+  margin: 0 auto 100px;
+  padding: 0;
+}
+
+@media only screen and (max-width: $breakpoint-large) {
+  .storefront__optionsList {
+    padding: $global-gutter;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+  li + li {
+    margin-top: 24px;
+  }
+}

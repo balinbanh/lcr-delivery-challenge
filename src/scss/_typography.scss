@@ -1,0 +1,46 @@
+html, body {
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+h1, .h1-style {
+   font-size: 2.93rem;
+   font-weight: 600;
+}
+
+h2, .h2-style {
+   font-size: 2.25rem;
+   font-weight: 600;
+}
+
+h3, .h3-style {
+   font-size: 1.33rem;
+   font-weight: 600;
+}
+
+h4, .h4-style {
+   font-size: 1.2rem;
+   font-weight: normal;
+}
+
+h5, .h5-style {
+   font-size: 1rem;
+   font-weight: 200;
+}
+
+// TODO: Add ultra light styles
+
+h1, .h1-style, h2, .h2-style, h3, .h3-style, h4, .h4-style, h5, .h5-style {
+   margin-bottom: 15px;
+   margin-top: 0;
+}
+
+p, a, span, label, input, .body-style {
+   font-size: 1.5rem;
+}
+p {
+   margin-top: 0px;
+}
+a {
+  color: black;
+}
